@@ -1056,6 +1056,7 @@ static inline CGFloat mgEaseInOutBounce(CGFloat t, CGFloat b, CGFloat c) {
     //call animation completion and invalidate timer
     if (completed){
         [timer invalidate];
+		[_displayLink invalidate];
         _displayLink = nil;
         if (_animationCompletion) {
             _animationCompletion();
